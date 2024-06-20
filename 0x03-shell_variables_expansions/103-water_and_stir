@@ -1,0 +1,2 @@
+#!/bin/bash
+echo $(echo "obase=$BASE_BESTCHOL; $(echo "ibase=$BASE_WATER; $WATER" | bc) + $(echo "ibase=$BASE_STIR; $STIR" | bc)" | bc)
