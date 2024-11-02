@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Display the PID and process name of all processes whose name contain "bash"
+
+for pid_dir in /proc/[0-9]*; do
+    pid=$(basename "$pid_dir")
+    if [[ -f "$pid_dir/comm" && "$(cat "$pid_dir/comm")" == "bash" ]]; then
+        echo "$pid bash"
+    fi
+done
