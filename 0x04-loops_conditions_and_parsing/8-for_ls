@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
-#Bash script
-
-list=$(ls)
-for i in $list
+# Bash script
+for word in *
 do
-    echo "$i" | cut -d'-' -f 2
+	echo "${word#*-}"
 done
