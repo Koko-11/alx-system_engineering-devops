@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Bash script
+for word in *
+do
+	echo "${word#*-}"
+done
